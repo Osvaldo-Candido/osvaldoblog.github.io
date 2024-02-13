@@ -1,0 +1,48 @@
+.introducao {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 100px;
+  padding: 40px 20px;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+}
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  position: relative;
+}
+.introducao h1::after {
+  content: "";
+  width: 130px;
+  height: 100px;
+  background: url("/code-light.svg") center no-repeat;
+  position: absolute;
+}
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+@media(max-width:900px)
+{
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    justify-content: center;
+  }
+  .introducao h1 {
+    font-size: 3.5rem;
+  }
+}
+@media(max-width: 600px)
+{
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .introducao p {
+    font-size: 1.3rem;
+  }
+  .introducao img {
+    display: none;
+  }
+}
